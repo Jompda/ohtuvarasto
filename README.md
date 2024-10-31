@@ -1,4 +1,4 @@
 # ohtuvarasto
 
 ## Build Status
-https://github.com/Jompda/ohtuvarasto/workflows/CI/badge.svg
+![GHA workflow badge](https://github.com/Jompda/ohtuvarasto/workflows/CI/badge.svg)
