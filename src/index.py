@@ -3,7 +3,7 @@ from varasto import Varasto
 
 
 def main():
-    """ main function """
+    # hups""" main function """
     mehua = Varasto(100.0)
     olutta = Varasto(100.0, 20.2)
 
