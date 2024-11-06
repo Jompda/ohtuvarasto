@@ -1,8 +1,9 @@
+""" Main module """
 from varasto import Varasto
 
 
-#moi
 def main():
+    """ main function """
     mehua = Varasto(100.0)
     olutta = Varasto(100.0, 20.2)
 
@@ -10,6 +11,13 @@ def main():
     print(f"Mehuvarasto: {mehua}")
     print(f"Olutvarasto: {olutta}")
 
+    setteritgetterit(mehua, olutta)
+    virhetilanteita()
+    olutvarasto(olutta)
+    mehuvarasto(mehua)
+
+def setteritgetterit(mehua, olutta):
+    """setterit ja getterit"""
     print("Olut getterit:")
     print(f"saldo = {olutta.saldo}")
     print(f"tilavuus = {olutta.tilavuus}")
@@ -23,6 +31,8 @@ def main():
     mehua.ota_varastosta(3.14)
     print(f"Mehuvarasto: {mehua}")
 
+def virhetilanteita():
+    """virhetilannehommat"""
     print("Virhetilanteita:")
     print("Varasto(-100.0);")
     huono = Varasto(-100.0)
@@ -32,15 +42,12 @@ def main():
     huono = Varasto(100.0, -50.7)
     print(huono)
 
+def olutvarasto(olutta):
+    """olutvarastosetit"""
     print(f"Olutvarasto: {olutta}")
     print("olutta.lisaa_varastoon(1000.0)")
     olutta.lisaa_varastoon(1000.0)
     print(f"Olutvarasto: {olutta}")
-
-    print(f"Mehuvarasto: {mehua}")
-    print("mehua.lisaa_varastoon(-666.0)")
-    mehua.lisaa_varastoon(-666.0)
-    print(f"Mehuvarasto: {mehua}")
 
     print(f"Olutvarasto: {olutta}")
     print("olutta.ota_varastosta(1000.0)")
@@ -48,12 +55,18 @@ def main():
     print(f"saatiin {saatiin}")
     print(f"Olutvarasto: {olutta}")
 
+def mehuvarasto(mehua):
+    """mehuvarastosetit"""
+    print(f"Mehuvarasto: {mehua}")
+    print("mehua.lisaa_varastoon(-666.0)")
+    mehua.lisaa_varastoon(-666.0)
+    print(f"Mehuvarasto: {mehua}")
+
     print(f"Mehuvarasto: {mehua}")
     print("mehua.otaVarastosta(-32.9)")
     saatiin = mehua.ota_varastosta(-32.9)
     print(f"saatiin {saatiin}")
     print(f"Mehuvarasto: {mehua}")
-
 
 if __name__ == "__main__":
     main()
